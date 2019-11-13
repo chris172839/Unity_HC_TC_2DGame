@@ -354,8 +354,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 2c330000
-      m_LastClickedID: 13100
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: 66fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -463,14 +463,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\GitHub\Unity_HC_TC_2DGame\UnityProject
+  m_LastProjectPath: C:\Users\USER\Documents\GitHub\Unity_HC_TC_2DGame\UnityProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d82f0000
-    m_LastClickedID: 12248
-    m_ExpandedIDs: 00000000c02d000000ca9a3b
+    m_SelectedIDs: da2f0000
+    m_LastClickedID: 12250
+    m_ExpandedIDs: 00000000c22d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -498,7 +498,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c02d0000
+    m_ExpandedIDs: 00000000c22d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -542,7 +542,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 2}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -671,9 +671,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.018893495, y: -0.014170106, z: -0.07042001}
+    m_Target: {x: 0, y: 0, z: -10}
     speed: 2
-    m_Value: {x: 0.018893495, y: -0.014170106, z: -0.07042001}
+    m_Value: {x: 2012.8073, y: 10.610912, z: -19.15625}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -706,9 +706,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.12025
+    m_Target: 22
     speed: 2
-    m_Value: 9.12025
+    m_Value: 81.319466
   m_Ortho:
     m_Target: 1
     speed: 2
