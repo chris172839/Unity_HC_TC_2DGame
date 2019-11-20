@@ -250,8 +250,10 @@ GameObject:
   - component: {fileID: 185980826}
   - component: {fileID: 185980825}
   - component: {fileID: 185980828}
+  - component: {fileID: 185980830}
+  - component: {fileID: 185980829}
   m_Layer: 0
-  m_Name: slime_1
+  m_Name: slime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,6 +355,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpheight: 0
   dead: 0
+--- !u!61 &185980829
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185980824}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00022619963, y: 0.0003572628}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.21915448, y: 0.22194858}
+  m_EdgeRadius: 0
+--- !u!50 &185980830
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185980824}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 1
+  m_Mass: 1.2160256
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &407630773
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,7 +810,7 @@ GameObject:
   - component: {fileID: 835029795}
   - component: {fileID: 835029794}
   m_Layer: 0
-  m_Name: "\u80CC\u666F"
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -918,8 +967,9 @@ GameObject:
   - component: {fileID: 1068189511}
   - component: {fileID: 1068189510}
   - component: {fileID: 1068189512}
+  - component: {fileID: 1068189513}
   m_Layer: 0
-  m_Name: "\u5730\u677F"
+  m_Name: ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1001,7 +1051,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ground: {fileID: 1068189511}
-  speed: 0.05
+  speed: 5
+--- !u!61 &1068189513
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068189509}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.05}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 500, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 500, y: 0.32}
+  m_EdgeRadius: 0
 --- !u!1 &1178662143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   bestscore: 0
+  pipe: {fileID: 1700122982708098358, guid: a3ca82365fa5abe4c81319610396c2b4, type: 3}
 --- !u!4 &1409337382
 Transform:
   m_ObjectHideFlags: 0

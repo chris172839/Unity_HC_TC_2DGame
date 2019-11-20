@@ -4,11 +4,10 @@ public class Ground : MonoBehaviour
 {
     public Transform ground;
     [Header("地板移動速度"),Range(0,100f)]
-    public float speed = 1f;
+    public float speed = 5f;
     private void Update()
     {
-        // Move the object forward along its z axis 1 unit/second.
-        ground.Translate(-speed, 0, 0);
+        Move();
     }
 
     /// <summary>
@@ -16,6 +15,6 @@ public class Ground : MonoBehaviour
     /// </summary>
     private void Move()
     {
-
+        ground.Translate(-speed * Time.deltaTime, 0, 0);
     }
 }

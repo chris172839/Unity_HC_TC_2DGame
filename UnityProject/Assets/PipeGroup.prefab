@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 1310776210476014125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.447806, y: 4.1064944, z: 0.7405674}
-  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_LocalScale: {x: 6, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 8682291083926617696}
   m_RootOrder: 1
@@ -89,6 +89,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8682291083926617696}
+  - component: {fileID: -2799158220604256976}
   m_Layer: 0
   m_Name: PipeGroup
   m_TagString: Untagged
@@ -112,6 +113,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2799158220604256976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700122982708098358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4661494e40ce6e84c8b157ef4b82047c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ground: {fileID: 8682291083926617696}
+  speed: 5
 --- !u!1 &2474027379257008434
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +153,7 @@ Transform:
   m_GameObject: {fileID: 2474027379257008434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.447806, y: -3.8935053, z: 0.7405674}
-  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_LocalScale: {x: 6, y: 8, z: 1}
   m_Children: []
   m_Father: {fileID: 8682291083926617696}
   m_RootOrder: 0
