@@ -34,12 +34,12 @@ public class GameManager : MonoBehaviour
 
     private void SpawnPipe()
     {
-        Vector3 pos = new Vector3(3.5f, Random.Range(-1.4f, 2.4f), 0);
+        Vector3 pos = new Vector3(3.5f, Random.Range(-0.8f, 2), 0);
         Instantiate(pipe, pos, Quaternion.identity);
     }
 
     private void Start()
     {
-        InvokeRepeating("SpawnPipe", 0, 2f);
+        InvokeRepeating("SpawnPipe", 1.5f, 3f);
     }
 }

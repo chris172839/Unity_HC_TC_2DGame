@@ -2,6 +2,6 @@
 {
     private void Start()
     {
-    Destroy(gameObject, 1.6f);
+    Destroy(gameObject, 3f);
     }
 }

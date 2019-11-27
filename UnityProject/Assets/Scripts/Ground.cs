@@ -4,7 +4,7 @@ public class Ground : MonoBehaviour
 {
     public Transform ground;
     [Header("地板移動速度"),Range(0,100f)]
-    public float speed = 5f;
+    public float speed = 3f;
     private void Update()
     {
         Move();
