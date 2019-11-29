@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,14 +11,15 @@ public class GameManager : MonoBehaviour
     public GameObject pipe;
     [Header("結束畫面")]
     public GameObject goFianl;
+    public Text scoreText;
     /// <summary>
     /// 增加分數
     /// </summary>
     /// <returns></returns>
-    public int AddScore()
+    public void AddScore()
     {
-        print("加分!!");
-        return ++score;
+        ++score;
+        scoreText.text = score.ToString();
     }
     /// <summary>
     /// 判定是否最高分並設定

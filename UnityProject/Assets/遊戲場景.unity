@@ -825,7 +825,7 @@ GameObject:
   - component: {fileID: 803571491}
   - component: {fileID: 803571493}
   m_Layer: 5
-  m_Name: Text
+  m_Name: score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1309,6 +1309,7 @@ MonoBehaviour:
   bestscore: 0
   pipe: {fileID: 1700122982708098358, guid: a3ca82365fa5abe4c81319610396c2b4, type: 3}
   goFianl: {fileID: 885961782}
+  scoreText: {fileID: 803571491}
 --- !u!4 &1409337382
 Transform:
   m_ObjectHideFlags: 0
