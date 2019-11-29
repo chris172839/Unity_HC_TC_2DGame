@@ -8,18 +8,21 @@ public class GameManager : MonoBehaviour
     public int bestscore = 0;
     [Header("水管群組")]
     public GameObject pipe;
+    [Header("結束畫面")]
+    public GameObject goFianl;
     /// <summary>
     /// 增加分數
     /// </summary>
     /// <returns></returns>
-    private int AddScore()
+    public int AddScore()
     {
+        print("加分!!");
         return ++score;
     }
     /// <summary>
     /// 判定是否最高分並設定
     /// </summary>
-    private void SetBest()
+    public void SetBest()
     {
         if (score > bestscore)
             bestscore = score;
@@ -27,9 +30,10 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// 遊戲結束
     /// </summary>
-    private void Gameover()
+    public void Gameover()
     {
-
+        goFianl.SetActive(true);
+        CancelInvoke("SpawnPipe");
     }
 
     private void SpawnPipe()

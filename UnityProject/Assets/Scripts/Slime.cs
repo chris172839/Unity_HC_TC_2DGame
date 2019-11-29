@@ -9,6 +9,10 @@ public class Slime : MonoBehaviour
     public GameObject goScore, goGM;
     public Rigidbody2D rb2D;
     public float rotation = 5f;
+    public GameManager gm;
+    [Header("音效")]
+    public AudioSource aud;
+    public AudioClip jumpSound, hurtSound, passSound;
 
     private void Start()
     {
@@ -22,15 +26,20 @@ public class Slime : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        print(collision.gameObject.name);
-        Dead();
+
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)     //isTrigger
     {
-        print(collision.gameObject.name);
-
-        Dead();
+        if (collision.gameObject.name == "passArea")
+        {
+            gm.AddScore();
+            aud.PlayOneShot(passSound);
+        }
+        else
+        {
+            Dead();
+        }
     }
 
     /// <summary>
@@ -47,6 +56,7 @@ public class Slime : MonoBehaviour
             rb2D.Sleep();
             rb2D.gravityScale = 1.5f;
             rb2D.AddForce(new Vector2(0, jumpheight));
+            aud.PlayOneShot(jumpSound);
         }
         rb2D.SetRotation(rotation * rb2D.velocity.y);
     }
@@ -56,6 +66,9 @@ public class Slime : MonoBehaviour
     private void Dead()
     {
         dead = true;
+        gm.Gameover();
+        Ground.speed = 0;
+        aud.PlayOneShot(hurtSound);
     }
     /// <summary>
     /// 是否通過水管
