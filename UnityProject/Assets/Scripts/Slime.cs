@@ -26,12 +26,12 @@ public class Slime : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        Dead();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)     //isTrigger
     {
-        if (collision.gameObject.name == "passArea")
+        if (collision.gameObject.name == "passArea" && !dead)
         {
             gm.AddScore();
             aud.PlayOneShot(passSound);
@@ -65,6 +65,7 @@ public class Slime : MonoBehaviour
     /// </summary>
     private void Dead()
     {
+        if (dead) return;
         dead = true;
         gm.Gameover();
         Ground.speed = 0;

@@ -201,7 +201,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 136034819}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1409337381}
+        m_MethodName: Replay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &136034819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,8 +262,8 @@ GameObject:
   - component: {fileID: 185980825}
   - component: {fileID: 185980828}
   - component: {fileID: 185980830}
-  - component: {fileID: 185980829}
   - component: {fileID: 185980831}
+  - component: {fileID: 185980829}
   m_Layer: 0
   m_Name: slime
   m_TagString: Untagged
@@ -378,7 +389,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00022619963, y: 0.0003572628}
+  m_Offset: {x: 0.0017947331, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -389,7 +400,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.21915448, y: 0.22194858}
+  m_Size: {x: 0.21949457, y: 0.22308391}
   m_EdgeRadius: 0
 --- !u!50 &185980830
 Rigidbody2D:
@@ -402,8 +413,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.7782564
+  m_UseAutoMass: 0
+  m_Mass: 0.7834513
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -589,7 +600,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 407630776}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1409337381}
+        m_MethodName: Exit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &407630776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,6 +1332,7 @@ MonoBehaviour:
   pipe: {fileID: 1700122982708098358, guid: a3ca82365fa5abe4c81319610396c2b4, type: 3}
   goFianl: {fileID: 885961782}
   scoreText: {fileID: 803571491}
+  BestScoreText: {fileID: 1928959280}
 --- !u!4 &1409337382
 Transform:
   m_ObjectHideFlags: 0

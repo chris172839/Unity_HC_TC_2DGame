@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("結束畫面")]
     public GameObject goFianl;
     public Text scoreText;
+    public Text BestScoreText;
     /// <summary>
     /// 增加分數
     /// </summary>
@@ -20,6 +22,7 @@ public class GameManager : MonoBehaviour
     {
         ++score;
         scoreText.text = score.ToString();
+        SetBest();
     }
     /// <summary>
     /// 判定是否最高分並設定
@@ -27,7 +30,7 @@ public class GameManager : MonoBehaviour
     public void SetBest()
     {
         if (score > bestscore)
-            bestscore = score;
+            PlayerPrefs.SetInt("最高分數", score);
     }
     /// <summary>
     /// 遊戲結束
@@ -44,8 +47,24 @@ public class GameManager : MonoBehaviour
         Instantiate(pipe, pos, Quaternion.identity);
     }
 
+    public void Replay()
+    {
+        print("重新");
+        SceneManager.LoadScene("遊戲場景");
+
+    }
+
+    public void Exit()
+    {
+        print("離開");
+        Application.Quit();
+    }
+
     private void Start()
     {
+        Screen.SetResolution(450, 800, false);
         InvokeRepeating("SpawnPipe", 1.5f, 3f);
+        bestscore = PlayerPrefs.GetInt("最高分數");
+        BestScoreText.text = bestscore.ToString();
     }
 }
